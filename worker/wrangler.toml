@@ -1,0 +1,25 @@
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+keep_vars = true
+
+[vars]
+PREFIX = "tmp"
+DEFAULT_DOMAINS = ["leilaomi.ccwu.cc"]
+DOMAINS = ["leilaomi.ccwu.cc"]
+JWT_SECRET = "K7mXq2pL9vN4sT6hR8wY3zaBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789abCD"
+ENABLE_USER_CREATE_EMAIL = true
+ENABLE_USER_DELETE_EMAIL = true
+ENABLE_AUTO_REPLY = false
+ADMIN_CONTACT = "horjane@protonmail.com"
+FORWARD_ADDRESS_LIST = ["onlyis@zohomail.com"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "7b1cfa6e-a2fe-4635-9287-be0e4e3af7ec"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "4f8b8d97335243dd873532fd8ae16780"
